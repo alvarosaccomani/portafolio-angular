@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 //Services
 import { InfoPaginaService } from './services/info-pagina.service';
+import { ProductosService } from './services/productos.service';
 
 //Components
 import { AppComponent } from './app.component';
@@ -15,7 +16,6 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
-
 
 
 @NgModule({
@@ -32,7 +32,7 @@ import { ItemComponent } from './pages/item/item.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [InfoPaginaService],
+  providers: [InfoPaginaService,ProductosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
