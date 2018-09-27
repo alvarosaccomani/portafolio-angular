@@ -7,7 +7,7 @@ export class ProductosService {
 
   cargando = true;
   productos: Producto[] = [];
-  productosFiltrado: Producto[] = [];
+  productosFiltrados: Producto[] = [];
 
   constructor( private http: HttpClient) { 
     this.cargarProductos();
@@ -43,7 +43,7 @@ export class ProductosService {
   }
 
   private filtrarProductos(termino:string) {
-    this.productosFiltrado=[];
+    this.productosFiltrados=[];
 
     termino = termino.toLowerCase();
 
@@ -51,11 +51,11 @@ export class ProductosService {
       const categoriaLower = prod.categoria.toLowerCase();
       const tituloLower = prod.titulo.toLowerCase();
       const codLower = prod.cod.toLocaleLowerCase();
-      
+
       if( categoriaLower.indexOf(termino) >= 0 
           || tituloLower.indexOf(termino) >= 0 
           || codLower.indexOf(termino) >= 0) {
-        this.productosFiltrado.push( prod );
+        this.productosFiltrados.push( prod );
       }
     });
   }
