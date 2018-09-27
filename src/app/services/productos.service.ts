@@ -51,6 +51,7 @@ export class ProductosService {
       const categoriaLower = prod.categoria.toLowerCase();
       const tituloLower = prod.titulo.toLowerCase();
       const codLower = prod.cod.toLocaleLowerCase();
+      
       if( categoriaLower.indexOf(termino) >= 0 
           || tituloLower.indexOf(termino) >= 0 
           || codLower.indexOf(termino) >= 0) {
